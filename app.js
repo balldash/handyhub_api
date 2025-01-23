@@ -1,5 +1,6 @@
 const express = require('express');
-const db = require('./db');
+const db = require('./app/models');
+require('dotenv').config();
 
 const app = express();
 app.use(express.json());
@@ -17,14 +18,4 @@ app.get("/status", (request, response) => {
     };
 
     response.send(status);
-});
-
-app.get('/test-db', async (req, res) => {
-    try {
-        const result = await db.query('SELECT NOW()');
-        res.json({ time: result.rows[0].now });
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Database connection failed' });
-    }
 });
