@@ -16,7 +16,8 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "start": "node app.js"
+    "start": "sequelize-cli db:migrate && node app.js",
+    "migrate": "sequelize-cli db:migrate"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
