@@ -1,4 +1,4 @@
-const db = require("./app/models");
+const db = require("./models");
 async function testConnection() {
   try {
     await db.sequelize.authenticate();
