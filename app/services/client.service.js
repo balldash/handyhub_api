@@ -1,4 +1,5 @@
 const { Client } = require("../../models");
+const { findByEmail } = require("./tradesman.service");
 
 module.exports = {
   async create(data) {
@@ -25,4 +26,8 @@ module.exports = {
     await client.destroy();
     return true;
   },
+
+  async findByEmail(email) {
+    return await Client.findOne({where: { email }});
+  }
 };

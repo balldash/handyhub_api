@@ -1,20 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const offerController = require("../controllers/offer.controller");
+const { authenticate } = require("../middlewares/auth.middleware");
 
-// Create a new offer
-router.post("/", offerController.createOffer);
-
-// Get all offers
-router.get("/", offerController.getAllOffers);
-
-// Get offer by ID
-router.get("/:id", offerController.getOfferById);
-
-// Update offer by ID
-router.put("/:id", offerController.updateOfferById);
-
-// Delete offer by ID
-router.delete("/:id", offerController.deleteOfferById);
+router.post("/", authenticate, offerController.createOffer);
+router.get("/", authenticate, offerController.getAllOffers);
+router.get("/:id", authenticate, offerController.getOfferById);
+router.put("/:id", authenticate, offerController.updateOfferById);
+router.delete("/:id", authenticate, offerController.deleteOfferById);
 
 module.exports = router;

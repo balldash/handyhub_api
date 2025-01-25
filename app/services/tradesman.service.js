@@ -25,4 +25,8 @@ module.exports = {
     await tradesman.destroy();
     return true;
   },
+
+  async findByEmail(email) {
+    return await Tradesman.findOne({ where: { email }});
+  }
 };
