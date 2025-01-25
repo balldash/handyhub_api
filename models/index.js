@@ -43,6 +43,9 @@ Object.keys(db).forEach((modelName) => {
   }
 });
 
+console.log("Loaded models:", Object.keys(db));
+
+
 // Export the Sequelize instance and models
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
