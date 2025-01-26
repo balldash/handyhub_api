@@ -59,6 +59,11 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
+      budget: {
+        allowNull: false,
+        type: Sequelize.FLOAT,
+        defaultValue: true,
+      }
     });
   },
 
