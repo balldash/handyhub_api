@@ -61,7 +61,7 @@ module.exports = {
       },
       budget: {
         allowNull: false,
-        type: Sequelize.FLOAT,
+        type: Sequelize.DECIMAL,
         defaultValue: true,
       }
     });
