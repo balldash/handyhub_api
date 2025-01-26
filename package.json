@@ -17,7 +17,7 @@
   "scripts": {
     "test": "npx jest --coverage",
     "start": "npm run migrate:reset && node app.js",
-    "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+    "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
