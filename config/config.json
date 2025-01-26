@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "tobi",
-    "database": "handyhub_db_test",
+    "database": "handyhub_db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
